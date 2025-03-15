@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#contact {
+    background-color: var(--primary-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--section-padding-small) var(--section-padding);
+}
+
+#follow-us {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+#follow-us h2 {
+    font-family: var(--primary-font);
+    color: white;
+    font-size: var(--secondary-font-size);
+}
+
+.social-media-icons a {
+    height: 35px;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+#follow-us div a img {
+    width: 3.5rem;
+    scale: 1/1;
+}
+
+#follow-us div a:hover {
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+#email-container {
+    position: relative;
+    width: 40rem;
+    max-width: 100%;
+}
+
+.email-input {
+    width: 100%;
+    padding: 1.5rem;
+    /* Space for the button */
+    border: 1px solid #ccc;
+    border-radius: var(--common-border-radius);
+    background-color: white;
+    font-size: 1.6rem;
+}
+
+.submit-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    font-style: var(--primary-font);
+    transform: translateY(-50%);
+    padding: 1.4rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: var(--common-border-radius);
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+
+
+#FooterSection {
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#FooterLeft {
+    display: flex;
+    gap: 10rem;
+}
+
+.FooterItems {
+    list-style: none;
+}
+
+#General h2,
+#Support h2 {
+    font-family: var(--primary-font);
+    font-size: 2.5rem;
+    color: white;
+    margin: 1rem 0;
+}
+
+
+.FooterItems li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: gray;
+    font-family: var(--secondary-font);
+}
+
+
+/* COPYRIGHTS */
+#Copyrights {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    background-color: white;
+    text-align: center;
+}

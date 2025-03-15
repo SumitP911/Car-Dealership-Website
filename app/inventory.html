@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/inventory.css">
+    <title>Vehicle Inventory</title>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section id="inventory">
+        <div id="filter">
+            <h1>BROWSE COLLECTION</h1>
+            <div id="search">
+                <input type="text" id="search" placeholder="Search Vehicle">
+                <button type="button">Search</button>
+            </div>
+            <h2>Filter</h2>
+            <select id="make">
+                <option value="">Make</option>
+                <option value="make1">Aston Martin</option>
+                <option value="make2">Audi</option>
+                <option value="make2">Bentley</option>
+                <option value="make2">BMW</option>
+                <option value="make2">Ferrari</option>
+                <option value="make2">Jaguar</option>
+                <option value="make2">Jeep</option>
+                <option value="make2">Lamborghini</option>
+                <option value="make2">Land Rover</option>
+                <option value="make2">Lexus</option>
+                <option value="make2">Maserati</option>
+                <option value="make2">Mclaren</option>
+                <option value="make2">Mercedes-Benz</option>
+                <option value="make2">Porsche</option>
+                <option value="make2">Rolls Royce</option>
+            </select>
+            <select id="type">
+                <option value="">Body Type</option>
+                <option value="make1">SUV</option>
+                <option value="make2">Sedan</option>
+                <option value="make2">Coupe</option>
+                <option value="make2">Convertible</option>
+                <option value="make2">Sports</option>
+                <option value="make2">MUV-MPV</option>
+                <option value="make2">Hatchback</option>
+                <option value="make2">Station Vagon</option>
+                <option value="make2">Hybrid</option>
+                <option value="make2">Electric</option>
+            </select>
+
+            <!-- Year Filter -->
+            <input type="number" id="year" min="1950" max="2025" step="1" value="2025">
+        </div>
+
+        <div class="card-container">
+            <script src="./js/cards.js"></script>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

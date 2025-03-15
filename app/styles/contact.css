@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+    font-family: var(--primary-font);
+    padding-top: var(--navbar-height);
+}
+
+#contact-us {
+    padding: var(--section-padding);
+}
+
+#ContactForm {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 1px 1px 8px 8px rgb(180, 180, 180);
+}
+
+#ContactForm h1 {
+    color: var(--secondary-gray);
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#ContactForm p {
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#ContactForm div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+#ContactForm .form .text-3 {
+    grid-row: span 2;
+}
+
+#ContactForm button {
+    grid-column: 2 / 3;
+    border: none;
+    background-color: var(--primary-red);
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+}
+
+#ContactForm button:hover {
+    background-color: var(--secondary-red);
+}
+
+.form input {
+    border: none;
+    padding: 1.5rem;
+    background-color: rgb(240, 240, 240);
+}
+
+#address {
+    padding: var(--section-padding-small);
+    background-color: white;
+}
+
+#address h2 {
+    font-family: var(--primary-font);
+    margin: 1rem;
+    font-size: var(--secondary-font-size);
+}
+
+#address p {
+    font-family: var(--secondary-font);
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+#gmap {
+    width: 100%;
+    height: 30rem;
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+}

@@ -1,0 +1,174 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "singularName": "vehicle",
+    "pluralName": "vehicles",
+    "displayName": "Vehicle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "Year": {
+      "type": "integer",
+      "required": false,
+      "unique": false,
+      "min": 1
+    },
+    "Price": {
+      "type": "integer",
+      "unique": false,
+      "required": true,
+      "min": 1
+    },
+    "EngineVariant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "EngineDisplacement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "MaxPower": {
+      "type": "string",
+      "minLength": 1
+    },
+    "MaxTorque": {
+      "type": "string",
+      "unique": false,
+      "minLength": 1
+    },
+    "Transmission": {
+      "type": "string",
+      "minLength": 1
+    },
+    "DriveTrain": {
+      "type": "enumeration",
+      "enum": [
+        "FWD",
+        "RWD",
+        "AWD"
+      ]
+    },
+    "FuelType": {
+      "type": "enumeration",
+      "enum": [
+        "Petrol",
+        "Diesel",
+        "CNG"
+      ]
+    },
+    "SecondaryFuelType": {
+      "type": "enumeration",
+      "enum": [
+        "Electric"
+      ]
+    },
+    "EmissionNormCompliance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "BodyType": {
+      "type": "enumeration",
+      "enum": [
+        "Micro",
+        "Hatchback",
+        "Sedan",
+        "Coupe",
+        "Convertible",
+        "Sports Car",
+        "SUV",
+        "MPV",
+        "Station Wagon",
+        "Pickup Truck"
+      ]
+    },
+    "SeatingCapacity": {
+      "type": "integer",
+      "min": 1
+    },
+    "Color": {
+      "type": "string",
+      "minLength": 1
+    },
+    "InteriorType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "InteriorColor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "KMsDriven": {
+      "type": "biginteger",
+      "min": "01"
+    },
+    "Ownership": {
+      "type": "enumeration",
+      "enum": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth",
+        "Fifth",
+        "Sixth",
+        "Seventh",
+        "Eighth",
+        "Ninth",
+        "Tenth"
+      ]
+    },
+    "RegistrationDate": {
+      "type": "date"
+    },
+    "ManufacturingDate": {
+      "type": "date"
+    },
+    "RegistrationType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "vehicles"
+    },
+    "Sold": {
+      "type": "boolean",
+      "default": false
+    },
+    "TopSpeed": {
+      "type": "integer",
+      "min": 1
+    },
+    "PreviousOwner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::owner.owner",
+      "inversedBy": "vehicles"
+    }
+  }
+}

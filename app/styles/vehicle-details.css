@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: var(--navbar-height);
+    /* background-color: rgba(240, 240, 240); */
+}
+
+#vehicle-details,
+#first-section,
+#description,
+#emi-calculator {
+    padding: var(--section-padding-small) var(--section-padding);
+}
+
+
+/* VEHICLE DETAILS SECTION */
+#vehicle-details h2 {
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    color: var(--secondary-gray);
+    padding-bottom: var(--section-padding-small);
+    border-bottom: 1px solid gray;
+}
+
+#first-section {
+    display: flex;
+}
+
+#first-section #left {
+    width: 50%;
+}
+
+#left .vehicle-name {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-size: 2rem;
+    padding: var(--section-padding-small);
+    border-left: 1rem solid var(--primary-red);
+}
+
+#left .vehicle-name h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem 0;
+}
+
+#left .vehicle-name h3 {
+    font-size: 2rem;
+}
+
+#left h4 {
+    color: var(--secondary-gray);
+    padding: 0 var(--section-padding-small);
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+}
+
+#left h5 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    padding: 0 var(--section-padding-small);
+    margin-bottom: 2rem;
+}
+
+#left p {
+    font-family: var(--secondary-font);
+    font-size: 1.7rem;
+    padding: 0 var(--section-padding-small);
+    margin-bottom: 1rem;
+}
+
+#left button {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    /* border: none; */
+    margin: 5rem 0.5rem;
+    padding: 2rem;
+    border-radius: var(--common-border-radius);
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+#left .calculate-emi:hover {
+    background-color: black;
+    color: white;
+}
+
+#left .reserve-now-button {
+    background-color: black;
+    color: white;
+}
+
+#left .reserve-now-button:hover {
+    background-color: var(--primary-red);
+}
+
+
+/* Image Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 60rem;
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--common-border-radius);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    /* Makes each slide take up full width */
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.carousel-control.next {
+    right: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.carousel-control:hover {
+    background-color: rgba(250, 10, 10, 0.8);
+}
+
+
+
+/* VEHICLE DESCRIPTION SECTION */
+#description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#description h2 {
+    grid-column: 1 / 3;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 2.5rem;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: var(--common-border-radius);
+}
+
+#description ul {
+    list-style: none;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    padding: var(--section-padding-small) 2rem;
+}
+
+
+
+/* EMI CALCULATOR SECTION */
+#emi-calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.emi-calculator {
+    /* background-color: gray; */
+    padding: 2rem;
+    width: 90%;
+}
+
+.emi-calculator h1 {
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    margin-bottom: 5rem;
+}
+
+.slider-container {
+    margin-bottom: 2rem;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+}
+
+.slider-container input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 5px solid var(--primary-red);
+    border-radius: var(--common-border-radius);
+    /* background: red; */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: red;
+    cursor: pointer;
+}
+
+.result {
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+
+#emi-calculator .right {
+    width: 100%;
+    background-color: var(--primary-red);
+    border-radius: var(--common-border-radius);
+}
+
+#emi-calculator .right h2 {
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    color: white;
+    padding: var(--section-padding-small);
+}
+
+#emi-calculator .right .left-right {
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    padding: var(--section-padding-small);
+}
+
+#emi-calculator .left-right .left p {
+    width: 30rem;
+    color: white;
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+}
+
+#emi-calculator .left-right .right p {
+    text-align: right;
+    color: white;
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+}
+
+#emi-calculator .left-right .left .final,
+#emi-calculator .left-right .right .final {
+    margin-top: 2rem;
+    font-weight: 700;
+}

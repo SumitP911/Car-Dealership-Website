@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: var(--navbar-height);
+}
+
+#sell-car-heading,
+#sell-car-form,
+#why-sell-to-us {
+    padding: var(--section-padding);
+}
+
+
+#sell-car-heading {
+    height: 10rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/app/Assets/Presets/Sell-Car/Lamborghini\ India\ 1.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 15rem 0;
+    text-align: center;
+    padding: 10rem var(--section-padding);
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+}
+
+#sell-car-form p {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+    margin-bottom: 3rem;
+}
+
+#sell-car-form .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2.5rem;
+}
+
+#sell-car-form .form input {
+    border: none;
+    background-color: rgb(240, 240, 240);
+    padding: 1.5rem;
+}
+
+#sell-car-form .form button {
+    grid-column: 2 / 3;
+    border: none;
+    background-color: var(--primary-red);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+#sell-car-form .form button:hover {
+    background-color: var(--secondary-red);
+}
+
+#why-sell-to-us {
+    background-color: rgb(240, 240, 240);
+}
+
+#why-sell-to-us h2 {
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#why-sell-to-us ul {
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-font-size);
+    list-style: none;
+}

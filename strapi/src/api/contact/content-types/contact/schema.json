@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Email": {
+      "type": "email",
+      "minLength": 1,
+      "required": true
+    },
+    "Phone": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Comment": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    }
+  }
+}

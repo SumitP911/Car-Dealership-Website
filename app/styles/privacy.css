@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: var(--navbar-height);
+}
+
+#privacy {
+    padding: var(--section-padding);
+}
+
+#privacy img {
+    width: 100%;
+    height: auto;
+}

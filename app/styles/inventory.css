@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin-top: var(--navbar-height);
+    background-color: var(--secondary-gray);
+}
+
+
+#inventory {
+    display: flex;
+    justify-content: center;
+    padding: var(--section-padding);
+}
+
+#filter {
+    width: 30%;
+    /* height: auto; */
+    padding: var(--section-padding-small);
+    /* border-right: 1px solid #ccc; */
+    background-color: #f9f9f9;
+}
+
+#search {
+    display: flex;
+}
+
+#search input {
+    height: 5rem;
+}
+
+#search button {
+    border: none;
+    color: white;
+    background-color: var(--primary-red);
+    width: 40%;
+    height: 5rem;
+}
+
+#search button:hover {
+    background-color: var(--secondary-red);
+}
+
+#filter h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#filter h2 {
+    font-size: var(--secondary-font-size);
+    margin-bottom: 1rem;
+}
+
+#filter label {
+    display: block;
+    /* Makes labels stack */
+    font-size: 1rem;
+}
+
+#filter select,
+#filter input[type="text"],
+#filter input[type="range"],
+#filter input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+}
+
+#filter input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: lightgray;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    background: var(--primary-red);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.value-display {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#browse-collection h1 {
+    text-align: center;
+    font-size: var(--primary-font-size);
+    margin: 3rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-grow: 1;
+    justify-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    padding: var(--section-padding-small);
+}
+
+.card-container a {
+    text-decoration: none;
+}
+
+.car-card {
+    background-color: #fff;
+    border-radius: var(--common-border-radius);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    width: 25rem;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.car-card:hover {
+    transform: scale(1.02);
+}
+
+.car-image {
+    width: 100%;
+    border-radius: var(--common-border-radius);
+    object-fit: cover;
+}
+
+.car-card h3 {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+/* Wrapper ensures uniform height and hides overflow */
+.name-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.car-name {
+    font-size: 2rem;
+    color: #333;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Scroll effect only applied if text overflows */
+.car-name.scroll {
+    transition: transform var(--scroll-duration) linear;
+}
+
+/* Scrolling on hover */
+.car-card:hover .car-name.scroll {
+    transform: translateX(-100%);
+}
+
+/* Instantly resets when hover stops */
+.car-card:not(:hover) .car-name.scroll {
+    transition: none;
+    transform: translateX(0);
+}
+
+.car-card p {
+    font-family: var(--secondary-font);
+    color: red;
+    font-size: 1.8rem;
+}

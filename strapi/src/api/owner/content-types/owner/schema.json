@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owners",
+  "info": {
+    "singularName": "owner",
+    "pluralName": "owners",
+    "displayName": "Owner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "FirstName": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "LastName": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Phone": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Email": {
+      "type": "email",
+      "required": true,
+      "minLength": 1
+    },
+    "vehicles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vehicle.vehicle",
+      "mappedBy": "owner"
+    }
+  }
+}

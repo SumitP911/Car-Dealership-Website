@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: var(--navbar-height);
+}
+
+#brand-name {
+    height: 20rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/app/Assets/Presets/About-Us/Ferrari\ Showroom\ 1.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 15rem 0;
+}
+
+#brand-name h2 {
+    padding: var(--section-padding);
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    color: white;
+}
+
+#why-us {
+    background-color: var(--secondary-gray);
+}
+
+#our-mission {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+#about-us,
+#why-us,
+#our-mission {
+    padding: var(--section-padding);
+}
+
+#about-us h2,
+#why-us h2,
+#our-mission h2 {
+    font-family: var(--primary-font);
+    font-size: var(--primary-font-size);
+    padding: var(--section-padding-small) 0;
+}
+
+#about-us p,
+#why-us p,
+#why-us ul,
+#our-mission p {
+    /* padding: 1rem 0; */
+    font-size: var(--secondary-font-size);
+    font-family: var(--secondary-font);
+    list-style: none;
+}

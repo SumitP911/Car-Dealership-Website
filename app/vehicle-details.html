@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/vehicle-details.css">
+    <title>Vehicle Details</title>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section id="vehicle-details">
+        <h2>VEHICLE DETAILS</h2>
+    </section>
+
+    <section id="first-section">
+        <div id="left">
+            <div class="vehicle-name">
+                <h2></h2> <!-- Brand Name -->
+                <h3></h3> <!-- Model Name + Year -->
+            </div>
+            <h4>Ex Showroom price starting at</h4>
+            <h5></h5> <!-- Price (Required for JS) -->
+            <h4>On Road Price</h4>
+            <p id="on-road-price"></p> <!-- Placeholder for On-Road Price -->
+            <button onclick="location.href='#emi-calculator'" class="calculate-emi">Calculate EMI >></button>
+            <button class="reserve-now-button" type="submit">Reserve Now</button>
+        </div>
+        <div id="right">
+            <div class="carousel-container">
+                <div class="carousel">
+
+                </div>
+
+                <!-- Left and right controls -->
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+
+                <!-- Script for carousel buttons -->
+                <script>
+                    let currentSlide = 0;
+
+                    function moveSlide(direction) {
+                        const slides = document.querySelectorAll('.carousel-item');
+                        const totalSlides = slides.length;
+
+                        // Hide current slide
+                        slides[currentSlide].classList.remove('active');
+
+                        // Calculate new slide index
+                        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+                        // Show new slide
+                        slides[currentSlide].classList.add('active');
+
+                        // Move the carousel
+                        document.querySelector('.carousel').style.transform = `translateX(-${currentSlide * 100}%)`;
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="description">
+        <h2>DESCRIPTION</h2>
+        <ul id="left"></ul> <!-- Left Description List -->
+        <ul id="right"></ul> <!-- Right Description List -->
+    </section>
+
+    <section id="emi-calculator">
+        <div class="left">
+            <div class="emi-calculator">
+                <h1>EMI Calculator</h1>
+
+                <div class="slider-container">
+                    <label for="downPayment">Down Payment: <span id="downPaymentValue">5000000</span></label>
+                    <input type="range" id="downPayment" min="0" max="50000000" step="1000" value="50000000">
+                </div>
+
+                <div class="slider-container">
+                    <label for="loanAmount">Loan Amount: <span id="loanAmountValue">2000000</span></label>
+                    <input type="range" id="loanAmount" min="0" max="500000000" step="1000" value="5000000">
+                </div>
+
+                <div class="slider-container">
+                    <label for="interestRate">Interest Rate: <span id="interestRateValue">5</span></label>
+                    <input type="range" id="interestRate" min="1" max="15" step="0.5" value="5">
+                </div>
+
+                <div class="slider-container">
+                    <label for="loanTenure">Loan Tenure: <span id="loanTenureValue">12</span> months</label>
+                    <input type="range" id="loanTenure" min="12" max="120" value="12">
+                </div>
+
+                <div class="result">
+                    <h2>Monthly EMI: <span id="emiResult">0</span>/-</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+            <h2>Pune, India</h2>
+            <div class="left-right">
+                <div class="left">
+                    <p>Ex-showroom price:</p>
+                    <p>RTO:</p>
+                    <p>Insurance:</p>
+                    <p>TCS (1%):</p>
+                    <p class="final">On-Road Price:</p>
+                </div>
+                <div class="right">
+                    <p id="exShowroomPrice"></p>
+                    <p id="rtoCharges"></p>
+                    <p id="insuranceCharges"></p>
+                    <p id="tcsCharges"></p>
+                    <p class="final" id="onRoadPrice"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Importing the script for the emi calculator -->
+        <script src="js/emi-calculator.js"></script>
+    </section>
+
+
+    <div id="footer"></div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/vehicle-details.js"></script>
+</body>
+
+</html>

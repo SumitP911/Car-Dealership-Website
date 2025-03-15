@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Opulence Car Dealership</title>
+</head>
+
+<body>
+    <!-- Importing Navbar -->
+    <div id="navbar"></div>
+
+    <section id="home">
+        <video id="LuxuryVideo" autoplay muted loop>
+            <source src="./Assets/Presets/Opulence.mp4" type="video/mp4">
+        </video>
+        <div id="brands-we-offer">
+            <img class="brand-logos" src="./Assets/Logos/Audi Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Aston Martin Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Bentley Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/BMW Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Ferrari Logo.png" alt=" Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Jaguar Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Lamborghini Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Land Rover Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Lexus Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Mclaren Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Mercedes Benz Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Maserati Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Porsche Logo.png" alt="Couldn't fetch logo">
+            <img class="brand-logos" src="./Assets/Logos/Rolls Royce Logo.png" alt="Couldn't fetch logo">
+        </div>
+    </section>
+
+    <section id="buy-car">
+        <div class="heading">
+            <h2>The car you deserve starts here.</h2>
+        </div>
+        <div class="content">
+            <div class="buy-car">
+                <h2>EXPLORE OUR COLLECTION</h2>
+                <p class="instant-pricing">Instant Pricing - No Hassle - Build your Deal Online</p>
+                <p class="explore-collection">
+                    Explore our exclusive collection, carefully selected from top brands across the country. Whether you
+                    seek
+                    performance, elegance, or innovation, our inventory offers the finest vehicles tailored to meet your
+                    desires. Begin your journey to owning the perfect car with us today!
+                </p>
+                <a href="inventory.html" class="btn">EXPLORE ENTIRE INVENTORY</a>
+            </div>
+            <div class="carousel">
+                <img src="./Assets/Presets/Buy-Car/Lamborghini Aventador SVJ Front.jpg" alt="Luxury Car 1"
+                    class="carousel-image" id="carousel-image">
+            </div>
+
+            <script>
+                const images = ['./Assets/Presets/Buy-Car/Lamborghini Aventador SVJ Front.jpg', './Assets/Presets/Buy-Car/Lamborghini Gallardo.jpg', './Assets/Presets/Buy-Car/Pagani Zonda Front.jpg', './Assets/Presets/Buy-Car/Ferrari 458 GT3.jpg', './Assets/Presets/Buy-Car/Mclaren 765LT.jpg', './Assets/Presets/Buy-Car/Aventadors x2.jpg', './Assets/Presets/Buy-Car/Porsche 911 GT3 RS.jpg']
+                let currentIndex = 0;
+                const carouselImage = document.getElementById('carousel-image');
+
+                function changeImage() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    carouselImage.src = images[currentIndex];
+                }
+
+                setInterval(changeImage, 2000); // Interval to change image
+            </script>
+        </div>
+    </section>
+
+    <section id="sell-your-car">
+        <div class="sell-car-content">
+            <h2>WANT TO SELL YOUR CAR?</h2>
+            <p>Receive the best value for your trade-in value. We will handle all the paperwork. Get your car evaluated
+                today</p>
+            <a href="sell-your-car.html" class="btn">SELL YOUR CAR</a>
+        </div>
+    </section>
+
+    <section id="who-are-we">
+        <h5>It's all in the name</h5>
+        <h1>OPULENCE</h1>
+        <p>
+            At Opulence, we are redefining the luxury and supercar car market in India by bringing a new standard of
+            excellence. Our mission is to offer more than just cars—we provide a premium
+            experience tailored to each client's unique taste and lifestyle. We aim to set new benchmarks in the Indian
+            luxury and supercar market by offering exclusive collections from world-renowned brands, ensuring that each
+            vehicle
+            in our showroom meets the highest standards of performance, safety, and elegance. Our customer-centric
+            approach guarantees personalized consultations, seamless purchasing experiences, and long-term post-purchase
+            relationships, built on trust and satisfaction. As a forward-thinking dealership, we integrate the latest
+            technology into our services, offering virtual tours and custom financing solutions. We are also committed
+            to the future of sustainable luxury, providing eco-friendly options like hybrid and electric models without
+            compromising on style or performance. While headquartered in Pune, our reach extends across India,
+            delivering world-class luxury to customers nationwide.
+        </p>
+    </section>
+
+    <!-- Importing Footer -->
+    <div id="footer"></div>
+
+    <!-- Including the external js file -->
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

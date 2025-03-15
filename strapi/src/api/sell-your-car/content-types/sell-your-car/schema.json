@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sell_your_cars",
+  "info": {
+    "singularName": "sell-your-car",
+    "pluralName": "sell-your-cars",
+    "displayName": "SellYourCar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "CustomerName": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "Make": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Model": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Year": {
+      "required": true,
+      "type": "integer"
+    },
+    "Mileage": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    },
+    "Color": {
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "AskingPrice": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    }
+  }
+}
