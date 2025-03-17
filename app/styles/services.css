@@ -69,21 +69,21 @@ body {
     aspect-ratio: 16 / 9;
 }
 
-.service-form .form {
+.service-form form {
     background-color: white;
     width: 100%;
     text-align: center;
     padding: var(--section-padding-small);
 }
 
-.service-form .form p {
+.service-form form p {
     font-size: 1.5rem;
     font-family: var(--secondary-font);
     text-align: left;
 }
 
-.service-form .form select,
-.service-form .form input {
+.service-form form select,
+.service-form form input {
     margin-bottom: 1rem;
     padding: 1.5rem;
     width: 90%;
@@ -92,7 +92,7 @@ body {
     border-bottom: 1px solid black;
 }
 
-.service-form .form button {
+.service-form form button {
     border: none;
     margin-top: 3rem;
     padding: 2rem;
@@ -101,6 +101,6 @@ body {
     background-color: var(--primary-red);
 }
 
-.service-form .form button:hover {
+.service-form form button:hover {
     background-color: var(--secondary-red);
 }

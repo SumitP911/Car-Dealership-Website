@@ -54,16 +54,17 @@
             <video class="service-video" autoplay muted loop>
                 <source src="./Assets/Presets/Services/Ferrari 458 GT3 edit.mp4" type="video/mp4">
             </video>
-            <div class="form">
+            <!-- <div class="form"> -->
+            <form id="serviceForm" action="submit.php" method="POST">
                 <p>
                     To get the best service, fill this out and our executive will attend you shortly.
                 </p>
-                <input type="text" class="text-1" placeholder="Car Make & Model *">
-                <input type="text" class="text-2" placeholder="Name *">
-                <input type="text" class="text-3" placeholder="Email *">
-                <input type="text" class="text-4" placeholder="Phone No *">
-                <select name="Select Service" id="select-car-service">
-                    <option value="service">Select Service *</option>
+                <input type="text" class="text-1" placeholder="Car Make & Model *" required>
+                <input type="text" class="text-2" placeholder="Name *" required>
+                <input type="text" class="text-3" placeholder="Email *" required>
+                <input type="text" class="text-4" placeholder="Phone No *" required>
+                <select name="Select Service" id="select-car-service" required>
+                    <option value="">Select Service *</option>
                     <option value="service-1">Standard Car Wash & Clean</option>
                     <option value="service-2">Tire Care & Wheel Alignment</option>
                     <option value="service-3">PPF & Ceramic Coating</option>
@@ -72,7 +73,9 @@
                     <option value="service-6">Custom Modifications & Accessories</option>
                 </select>
                 <button type="submit">SUBMIT</button>
-            </div>
+                <script src="./js/services.js"></script>
+                <!-- </div> -->
+            </form>
         </div>
 
     </section>
