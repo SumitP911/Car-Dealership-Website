@@ -34,20 +34,20 @@ body {
     margin-bottom: 3rem;
 }
 
-#sell-car-form .form {
+#sell-car-form form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 2.5rem;
 }
 
-#sell-car-form .form input {
+#sell-car-form form input {
     border: none;
     background-color: rgb(240, 240, 240);
     padding: 1.5rem;
 }
 
-#sell-car-form .form button {
+#sell-car-form form button {
     grid-column: 2 / 3;
     border: none;
     background-color: var(--primary-red);
@@ -57,7 +57,7 @@ body {
     font-size: 1.5rem;
 }
 
-#sell-car-form .form button:hover {
+#sell-car-form form button:hover {
     background-color: var(--secondary-red);
 }
 
@@ -73,6 +73,8 @@ body {
 }
 
 #why-sell-to-us ul {
+    margin-left: 8%;
+    margin-right: 8%;
     font-family: var(--secondary-font);
     font-size: var(--secondary-font-size);
     list-style: none;
