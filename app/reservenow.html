@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Car</title>
+    <link rel="stylesheet" href="./styles/reservenow.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <h2>Reserve Your Car</h2>
+        <form id="reserveForm">
+
+            <!-- User Information -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+            <!-- Car Selection -->
+            <label for="car">Car Model:</label>
+            <select id="car" name="car" required>
+                <option value="">Select a car</option>
+                <option value="Tesla Model 3">Tesla Model 3</option>
+                <option value="Ford Mustang">Ford Mustang</option>
+                <option value="BMW X5">BMW X5</option>
+            </select>
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" min="2000" max="2025" required>
+
+            <label for="color">Preferred Color:</label>
+            <select id="color" name="color">
+                <option value="Any">Any</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Grey">Grey</option>
+                <option value="Red">Red</option>
+            </select>
+
+            <!-- Reservation Details -->
+            <label for="date">Pickup Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="comments">Additional Requests:</label>
+            <textarea id="comments" name="comments" rows="3"></textarea>
+
+            <label>
+                <input type="checkbox" id="agree" required> I agree to the terms & conditions
+            </label>
+
+            <button type="submit">Reserve Now</button>
+
+        </form>
+        <p id="successMessage"></p>
+    </div>
+
+    <script src="reservenow.js"></script>
+
+</body>
+
+</html>
