@@ -41,56 +41,32 @@
     transform: scale(1.15);
 }
 
-#email-container {
-    position: relative;
-    width: 40rem;
-    max-width: 100%;
-}
-
-.email-input {
-    width: 100%;
-    padding: 1.5rem;
-    /* Space for the button */
-    border: 1px solid #ccc;
-    border-radius: var(--common-border-radius);
-    background-color: white;
-    font-size: 1.6rem;
-}
-
-.submit-btn {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    font-style: var(--primary-font);
-    transform: translateY(-50%);
-    padding: 1.4rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: var(--common-border-radius);
-    cursor: pointer;
-}
-
-.submit-btn:hover {
-    background-color: #333;
-}
-
-
-
 #FooterSection {
-    padding: var(--section-padding);
+    padding: 2rem var(--section-padding-small);
     display: flex;
     justify-content: space-between;
     background-color: black;
 }
 
 #FooterLeft {
+    margin-left: 3rem;
+    padding: 5rem;
     display: flex;
-    gap: 10rem;
+    gap: 15rem;
 }
 
-.FooterItems {
+#FooterRight {
     list-style: none;
+    padding: 5rem;
+    margin-right: 3rem;
+    /* padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 10rem; */
+}
+
+#footergmap {
+    width: 50rem;
+    height: 20rem;
 }
 
 #General h2,
